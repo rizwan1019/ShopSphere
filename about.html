@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | ShopSphere</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/lib/w3-theme-black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar on click -->
+    <nav
+      class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge"
+      style="display: none; z-index: 2"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-display-topright w3-text-teal"
+        >Close
+        <i class="fa fa-remove"></i>
+      </a>
+    </nav>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme-d2 w3-left-align">
+        <a
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+          href="javascript:void(0);"
+          onclick="openNav()"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-teal"
+          ><i class="fa fa-home w3-margin-right"></i>Shop Sphere</a
+        >
+        <a
+          href="about.html"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          >About</a
+        >
+        <a
+          href="contact.html"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          >Contact</a
+        >
+        <a
+          href="product.html"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          >Products</a
+        >
+        <a
+          href="privacy.html"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          >Privacy Policy</a
+        >
+        <a
+          href="terms.html"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          >Terms & Conditions</a
+        >
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div
+        id="navDemo"
+        class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium"
+      >
+        <a href="about.html" class="w3-bar-item w3-button">About</a>
+        <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+        <a href="product.html" class="w3-bar-item w3-button">Products</a>
+        <a href="privacy.html" class="w3-bar-item w3-button">Privacy Policy</a>
+        <a href="terms.html" class="w3-bar-item w3-button"
+          >Terms & Conditions</a
+        >
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="w3-display-container w3-animate-opacity">
+      <img
+        src="about-hero.jpg"
+        alt="About Us"
+        style="width: 100%; min-height: 350px; max-height: 600px"
+      />
+      <div
+        class="w3-display-middle w3-padding-large w3-black w3-opacity-min w3-center"
+      >
+        <h1 class="w3-xxlarge">About ShopSphere</h1>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-container w3-padding-64 w3-center" id="about">
+      <h2>Who We Are</h2>
+      <p class="w3-large w3-text-gray">
+        At <strong>ShopSphere</strong>, we believe in blending style, comfort,
+        and affordability into every product we offer. Our goal is to provide
+        fashion-forward clothing and lifestyle essentials for everyone. We
+        prioritize quality, innovation, and exceptional customer service to
+        create a seamless shopping experience for you.
+      </p>
+    </div>
+
+    <!-- Our Story Section -->
+    <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="our-story">
+      <div class="w3-half">
+        <img
+          src="our-story.jpg"
+          alt="Our Story"
+          style="width: 100%; border-radius: 10px"
+        />
+      </div>
+      <div class="w3-half">
+        <h2>Our Journey</h2>
+        <p class="w3-large">
+          ShopSphere started as a small idea fueled by a passion for fashion.
+          From a humble online storefront, we have grown into a thriving
+          e-commerce platform that delivers high-quality apparel to customers
+          worldwide.
+        </p>
+        <p class="w3-large">
+          Our journey has been driven by one goal – to make fashion accessible,
+          stylish, and affordable for everyone. With a dedicated team and a
+          growing community, we continue to push the boundaries of online
+          shopping.
+        </p>
+      </div>
+    </div>
+
+    <!-- Core Values Section -->
+    <div class="w3-container w3-padding-64 w3-center" id="values">
+      <h2>Our Values</h2>
+      <div class="w3-row">
+        <div class="w3-third w3-padding">
+          <i class="fa fa-check-circle w3-text-teal w3-xxlarge"></i>
+          <h3>Quality First</h3>
+          <p>
+            We ensure that every product we sell meets the highest standards of
+            quality and durability.
+          </p>
+        </div>
+        <div class="w3-third w3-padding">
+          <i class="fa fa-heart w3-text-teal w3-xxlarge"></i>
+          <h3>Customer Focus</h3>
+          <p>
+            Our customers are at the heart of everything we do. Your
+            satisfaction is our top priority.
+          </p>
+        </div>
+        <div class="w3-third w3-padding">
+          <i class="fa fa-leaf w3-text-teal w3-xxlarge"></i>
+          <h3>Sustainability</h3>
+          <p>
+            We are committed to eco-friendly practices and sustainable fashion
+            choices.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Mission Section -->
+    <div class="w3-row-padding w3-padding-64 w3-theme-l1">
+      <div class="w3-half">
+        <h2>Our Mission</h2>
+        <p class="w3-large">
+          Our mission is to redefine online shopping by offering a seamless
+          experience that blends affordability, quality, and style. We aim to
+          inspire confidence in our customers through fashion that feels as good
+          as it looks.
+        </p>
+      </div>
+      <div class="w3-half">
+        <img
+          src="our-mission.jpg"
+          alt="Our Mission"
+          style="width: 100%; border-radius: 10px"
+        />
+      </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="w3-container w3-padding-64 w3-center" id="why-us">
+      <h2>Why Choose ShopSphere?</h2>
+      <div class="w3-row">
+        <div class="w3-quarter w3-padding">
+          <i class="fa fa-truck w3-text-teal w3-xxlarge"></i>
+          <h3>Fast Shipping</h3>
+          <p>Quick and reliable delivery to your doorstep.</p>
+        </div>
+        <div class="w3-quarter w3-padding">
+          <i class="fa fa-tags w3-text-teal w3-xxlarge"></i>
+          <h3>Affordable Pricing</h3>
+          <p>Trendy fashion at pocket-friendly prices.</p>
+        </div>
+        <div class="w3-quarter w3-padding">
+          <i class="fa fa-shopping-cart w3-text-teal w3-xxlarge"></i>
+          <h3>Wide Selection</h3>
+          <p>From casual wear to high fashion – we have it all.</p>
+        </div>
+        <div class="w3-quarter w3-padding">
+          <i class="fa fa-smile-o w3-text-teal w3-xxlarge"></i>
+          <h3>Happy Customers</h3>
+          <p>Thousands of satisfied shoppers worldwide.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+      <p>Powered by <a href="#" target="_blank">ShopSphere</a></p>
+    </footer>
+    <script>
+      // Script for side navigation
+      function w3_open() {
+        var x = document.getElementById("mySidebar");
+        x.style.width = "300px";
+        x.style.paddingTop = "10%";
+        x.style.display = "block";
+      }
+
+      // Close side navigation
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+
+      // Used to toggle the menu on smaller screens when clicking on the menu button
+      function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping Cart - Urban Fashion Club</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .cart-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+      }
+      .cart-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+      }
+      .cart-item img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+      }
+      .cart-item-info {
+        flex-grow: 1;
+        margin-left: 10px;
+        text-align: left;
+      }
+      .remove-item {
+        background: red;
+        color: white;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .total-price {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .clear-cart {
+        background: black;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      .clear-cart:hover {
+        background: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cart-container">
+      <h2>Shopping Cart</h2>
+      <div id="cart-items"></div>
+      <p class="total-price">Total: <span id="total-price">$0.00</span></p>
+      <button onclick="clearCart()" class="clear-cart">Clear Cart</button>
+    </div>
+
+    <script>
+      function loadCart() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartContainer = document.getElementById("cart-items");
+        let totalPrice = 0;
+
+        cartContainer.innerHTML = "";
+
+        cart.forEach((item, index) => {
+          let itemElement = document.createElement("div");
+          itemElement.classList.add("cart-item");
+          itemElement.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <div class="cart-item-info">
+              <p><strong>${item.name}</strong></p>
+              <p>${item.price}</p>
+            </div>
+            <button class="remove-item" onclick="removeItem(${index})">Remove</button>
+          `;
+          cartContainer.appendChild(itemElement);
+
+          totalPrice += parseFloat(item.price.replace("$", ""));
+        });
+
+        document.getElementById(
+          "total-price"
+        ).innerText = `$${totalPrice.toFixed(2)}`;
+      }
+
+      function removeItem(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart(); // Refresh cart after removing item
+      }
+
+      function clearCart() {
+        localStorage.removeItem("cart");
+        loadCart(); // Refresh cart after clearing
+      }
+
+      // Load cart on page load
+      document.addEventListener("DOMContentLoaded", loadCart);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Premium Jacket - BuyHive</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+      }
+      .product-img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+      }
+      .product-title {
+        font-size: 28px;
+        margin: 20px 0 10px;
+      }
+      .product-price {
+        font-size: 24px;
+        color: #e74c3c;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .product-description {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      .feature-list {
+        text-align: left;
+        max-width: 600px;
+        margin: 0 auto 20px;
+        padding-left: 0;
+      }
+      .feature-list li {
+        list-style: none;
+        padding: 8px 0;
+        border-bottom: 1px solid #ddd;
+      }
+      .add-to-cart,
+      .go-to-cart {
+        display: inline-block;
+        padding: 12px 20px;
+        background: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.3s ease;
+        text-decoration: none;
+        margin: 10px;
+      }
+      .add-to-cart:hover,
+      .go-to-cart:hover {
+        background: #333;
+      }
+      .reviews {
+        text-align: left;
+        max-width: 600px;
+        margin: 20px auto;
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      .review {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+      .social-icons a {
+        margin: 5px;
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+      .social-icons a:hover {
+        color: #e74c3c;
+      }
+      .w3-left-align {
+        text-align: left !important;
+        background-color: white;
+      }
+      div#navDemo {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar on click -->
+    <nav
+      class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge"
+      style="display: none; z-index: 2"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-display-topright w3-text-teal"
+        >Close
+        <i class="fa fa-remove"></i>
+      </a>
+    </nav>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme-d2 w3-left-align">
+        <a
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+          href="javascript:void(0);"
+          onclick="openNav()"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-teal"
+          ><i class="fa fa-home w3-margin-right"></i>Shop Sphere</a
+        >
+        <a
+          href="about.html"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          >About</a
+        >
+        <a
+          href="contact.html"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          >Contact</a
+        >
+        <a
+          href="product.html"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          >Products</a
+        >
+        <a
+          href="privacy.html"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          >Privacy Policy</a
+        >
+        <a
+          href="terms.html"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          >Terms & Conditions</a
+        >
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div
+        id="navDemo"
+        class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium"
+      >
+        <a href="about.html" class="w3-bar-item w3-button">About</a>
+        <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+        <a href="product.html" class="w3-bar-item w3-button">Products</a>
+        <a href="privacy.html" class="w3-bar-item w3-button">Privacy Policy</a>
+        <a href="terms.html" class="w3-bar-item w3-button"
+          >Terms & Conditions</a
+        >
+      </div>
+    </div>
+
+    <!-- Product Section -->
+    <div class="container" style="margin-top: 100px">
+      <img src="jacket.jpg" alt="Premium Jacket" class="product-img" />
+      <h1 class="product-title">Premium Jacket</h1>
+      <p class="product-price">$30.00</p>
+
+      <p class="product-description">
+        Elevate your style and stay warm with our **Premium Jacket**, designed
+        for ultimate **comfort, durability, and all-weather protection**.
+        Crafted from **high-quality water-resistant fabric**, this jacket is
+        your perfect companion for **chilly mornings and breezy nights**. The
+        **soft fleece lining** ensures **maximum insulation**, while the
+        **modern slim-fit design** gives you a **stylish, effortless look**.
+        Featuring **adjustable cuffs, a zip-up front, and deep pockets**, this
+        jacket is **both functional and fashionable**. Whether you're heading
+        outdoors or layering up for a casual outfit, this is a wardrobe
+        essential. Available in **Black, Grey, and Navy Blue** with sizes
+        ranging from **S to XXL**. Upgrade your winter game today!
+      </p>
+
+      <!-- Features -->
+      <ul class="feature-list">
+        <li><b>Material:</b> Water-Resistant Polyester & Fleece</li>
+        <li><b>Fit:</b> Slim & Regular Fit Available</li>
+        <li><b>Colors:</b> Black, Grey, Navy Blue</li>
+        <li><b>Sizes:</b> S, M, L, XL, XXL</li>
+        <li><b>Insulation:</b> Soft Fleece Lining</li>
+        <li><b>Pockets:</b> Deep Side & Inner Pockets</li>
+      </ul>
+
+      <!-- Buttons -->
+      <button
+        class="add-to-cart"
+        onclick="addToCart('Jacket', 'jacket.jpg', '$30.00')"
+      >
+        Add to Cart
+      </button>
+      <a href="cart.html" class="go-to-cart">Go to Cart</a>
+
+      <!-- Customer Reviews -->
+      <div class="reviews">
+        <h3>Customer Reviews</h3>
+        <div class="review">
+          <p><b>Mark T.</b> ★★★★★</p>
+          <p>"Best jacket I've owned! Warm, stylish, and super comfortable."</p>
+        </div>
+        <div class="review">
+          <p><b>Lisa R.</b> ★★★★☆</p>
+          <p>"Great quality, but I wish it came in more colors."</p>
+        </div>
+      </div>
+
+      <!-- Social Share -->
+      <div class="social-icons">
+        <p>Share this product:</p>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+      <p>
+        Powered by
+        <a href="#" target="_blank">Shop Sphere</a>
+      </p>
+
+      <div
+        style="position: relative; bottom: 100px; z-index: 1"
+        class="w3-tooltip w3-right"
+      ></div>
+    </footer>
+    <script>
+      // Script for side navigation
+      function w3_open() {
+        var x = document.getElementById("mySidebar");
+        x.style.width = "300px";
+        x.style.paddingTop = "10%";
+        x.style.display = "block";
+      }
+
+      // Close side navigation
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+
+      // Used to toggle the menu on smaller screens when clicking on the menu button
+      function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+    <script>
+      function addToCart(name, image, price) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, image, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+      }
+    </script>
+  </body>
+</html>
